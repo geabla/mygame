@@ -114,4 +114,12 @@ function checkCollision(x, y, tail) {
 }
 
 // Funzione per iniziare una nuova partita
-function new
+function newGame() {
+  score = 0;
+  speed = initialSpeed;
+  clearInterval(moveInterval);
+  snake = [initialSnakePosition];
+  generateBone();
+  moveInterval = setInterval(moveSnake, speed);
+  render();
+}
