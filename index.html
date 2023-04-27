@@ -1,37 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Indovina il numero</title>
+	<title>Gioco del cane</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-	<h1>Indovina il numero!</h1>
-	<p>Ho pensato a un numero compreso tra 1 e 100. Hai 10 tentativi per indovinare il numero!</p>
-	<input type="text" id="guess" placeholder="Inserisci un numero">
-	<button onclick="checkGuess()">Indovina!</button>
-	<p id="message"></p>
-	<script>
-		// Genera un numero casuale compreso tra 1 e 100
-		var secretNumber = Math.floor(Math.random() * 100) + 1;
-		var tries = 10;
-
-		function checkGuess() {
-			// Ottiene il numero inserito dall'utente
-			var guess = document.getElementById("guess").value;
-
-			// Controlla se il numero è corretto
-			if (guess == secretNumber) {
-				document.getElementById("message").innerHTML = "Hai indovinato! Il numero segreto era " + secretNumber + ".";
-			} else {
-				tries--;
-				if (tries == 0) {
-					document.getElementById("message").innerHTML = "Mi dispiace, hai esaurito i tentativi. Il numero segreto era " + secretNumber + ".";
-				} else if (guess > secretNumber) {
-					document.getElementById("message").innerHTML = "Il numero è troppo alto. Hai ancora " + tries + " tentativi.";
-				} else {
-					document.getElementById("message").innerHTML = "Il numero è troppo basso. Hai ancora " + tries + " tentativi.";
-				}
-			}
-		}
-	</script>
+	<h1>Gioco del cane</h1>
+	<div class="game-container">
+		<div class="grid-container">
+			<!-- Griglia di gioco -->
+		</div>
+		<div class="score-container">
+			<p>Punteggio: <span id="score">0</span></p>
+			<button id="new-game">Nuova partita</button>
+		</div>
+	</div>
+	<script src="script.js"></script>
 </body>
 </html>
