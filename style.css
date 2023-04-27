@@ -1,0 +1,39 @@
+/* Stile della griglia di gioco */
+.grid-container {
+	display: grid;
+	grid-template-columns: repeat(20, 1fr);
+	grid-template-rows: repeat(20, 1fr);
+	width: 400px;
+	height: 400px;
+	border: 1px solid black;
+	margin: 0 auto;
+}
+
+/* Stile della cella */
+.cell {
+	background-color: white;
+	border: 1px solid lightgray;
+}
+
+/* Stile del cane */
+.dog {
+	background-color: black;
+}
+
+/* Stile del punteggio e del pulsante */
+.score-container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-top: 20px;
+}
+
+#new-game {
+	font-size: 1.2rem;
+	padding: 10px;
+	background-color: #4CAF50;
+	color: white;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
